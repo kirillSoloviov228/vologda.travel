@@ -1,0 +1,389 @@
+/* Общие стили */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    color: #fff;
+}
+
+header {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin-right: 10px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #000000;
+    padding: 10px 0;
+}
+
+.button {
+    flex: 1;
+    padding: 10px;
+    font-size: 1em;
+    color: rgb(243, 141, 141);
+    background-color: #000000;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ffffff;
+}
+
+.map-container,
+.merch-container,
+.saved-places-container,
+.add-place-form {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(243, 243, 243, 0.1);
+    border-radius: 8px;
+    background-color: #000000;
+    position: relative;
+}
+
+.map-container:before,
+.merch-container:before,
+.saved-places-container:before,
+.add-place-form:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #000000, #000000);
+    z-index: -1;
+}
+
+
+/* Стили для вложенного iframe */
+
+.map-container iframe {
+    width: 100%;
+    height: 1030%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background: linear-gradient(to bottom, #000000, #360202);
+    display: block;
+    box-shadow: 0px 0px 156px rgba(255, 255, 255, 0.1);
+    border-radius: 29px;
+    background-color: #fffbfb;
+}
+
+
+/* Стили для текстовых элементов */
+
+h2 {
+    color: #ffffff;
+}
+
+.place-card {
+    border: 1px solid #000000;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.place-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.place-card button:hover {
+    background-color: #000000;
+}
+
+
+/* Стили для формы добавления места */
+
+.add-place-form {
+    text-align: center;
+}
+
+.add-place-form h2 {
+    color: rgb(0, 0, 0);
+}
+
+.add-place-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-place-form label,
+.add-place-form textarea,
+.add-place-form input[type="url"],
+.add-place-form input[type="text"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+}
+
+.add-place-form button {
+    padding: 10px;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    background-color: #0a0a0a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-place-form button:hover {
+    background-color: #ff0505;
+}
+
+
+/* Стили для контейнера сохраненных мест */
+
+.saved-places-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(97% - 40px);
+}
+
+.saved-places-container {
+    max-width: 100%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.saved-places-container h2 {
+    color: #ffffff;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.saved-places-container p {
+    color: #ffffff;
+    line-height: 1.5;
+    font-size: 1.2em;
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
+}
+
+.saved-places-wrapper {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.place {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #131212;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(97% - 40px);
+}
+
+.place img {
+    max-width: 100%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.place h3 {
+    color: #ffffff;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.place p {
+    color: #ffffff;
+    line-height: 1.5;
+    font-size: 1.2em;
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
+}
+
+.delete-button {
+    background-color: #2c2c2c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #ff0000;
+}
+
+
+/* Логотип и заголовок сайта */
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin-right: 30px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 40px;
+    color: white;
+}
+
+
+/* мерч */
+
+.merch-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#popular-places .place {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+#popular-places img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Стили для контейнера социальных значков */
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+
+/* Стили для значков в контейнере */
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    margin-right: 25px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 50%;
+}
+
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Анимация при наведении */
+
+.social-icon:hover {
+    transform: scale(1.4) rotate(360deg);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);
+}
+
+
+/* Медиа-запросы для оптимизации под разные устройства */
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+    .logo {
+        width: 120px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    .button {
+        padding: 8px;
+        font-size: 0.8em;
+    }
+    .map-container iframe {
+        height: 500px;
+    }
+    .place-card,
+    .add-place-form label,
+    .add-place-form textarea,
+    .add-place-form input[type="url"],
+    .add-place-form input[type="text"] {
+        padding: 8px;
+    }
+    .add-place-form button {
+        padding: 8px;
+        font-size: 0.8em;
+    }
+    .social-icon {
+        width: 35px;
+        height: 35px;
+        margin-right: 15px;
+    }
+}
+
+
+/* Подключение локального шрифта Kramola */
+
+@font-face {
+    font-family: 'Kramola';
+    src: url('Kramola.woff2') format('woff2'), /* добавь другие форматы, если есть */
+    url('Kramola.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Применение шрифта к заголовку и кнопкам */
+
+h1 {
+    font-family: 'Kramola', sans-serif;
+}
+
+.button {
+    font-family: 'Kramola', sans-serif;
+}
